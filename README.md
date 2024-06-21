@@ -17,3 +17,43 @@ Any - Any kind of value, no specific type assignment // it also can be used to i
 Never - Represents the type of values that never occur
 Unknown - Represents the type-safe counterpart of any
 Object - Represents any non-primitive type
+
+
+# Type Aliases
+
+Type aliases create a new name for a type. Type aliases are sometimes similar to interfaces, but can name primitives, unions, tuples, and any other types that you’d otherwise have to write by hand.
+
+
+
+
+# type Readonly<T>
+
+let user ={
+    readonly name: string;
+    age: number;
+}
+
+let newUser: Readonly<user> = {
+    name: 'John',
+    age: 30
+}
+
+newUser.name = 'Doe'; // Error: Cannot assign to 'name' because it is a read-only property.
+
+<!-- explain above -->
+
+# type Partial<T>
+
+type Partial<T> = {
+    [P in keyof T]?: T[P];
+};
+
+interface User {
+    name: string;
+    age: number;
+}
+
+let user: Partial<User> = {
+    name: 'John'
+}
+
