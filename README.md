@@ -57,3 +57,34 @@ let user: Partial<User> = {
     name: 'John'
 }
 
+
+# function Parameters and how to use them and handle function output 
+
+function add(a: number, b: number): number {
+    return a + b;
+}
+
+let sum: number = add(10, 20);
+
+console.log(sum); // 30
+
+<!-- union example  -->
+
+function add(a: number | string, b: number | string): number {
+    if (typeof a === 'string') {
+        a = parseInt(a, 10);
+    }
+
+    if (typeof b === 'string') {
+        b = parseInt(b, 10);
+    }
+
+    return a + b;
+}
+
+let sum: number = add(10, 20);
+
+console.log(sum); // 30
+
+
+
