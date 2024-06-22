@@ -220,4 +220,20 @@ let superAdmin: SuperAdmin = {
 };
 
 
+<!--    reopening of interface example -->
+
+
+interface User {
+    name: string;
+}
+
+interface User {
+    age: number;
+}
+
+let user: User = {
+    name: 'John',
+    age: 30
+};
+
 
