@@ -15,9 +15,5 @@
 
 class User {
   readonly city: string = "Delhi";
-  constructor(city: string) {
-    this.city = city;
-  }
+  constructor(public email: string, public name: string) {}
 }
-
-const user = new User("Delhi");

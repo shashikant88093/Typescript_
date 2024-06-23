@@ -11,9 +11,9 @@
 // console.log(user);
 // readonly city: string;
 class User {
-    constructor(city) {
+    constructor(email, name) {
+        this.email = email;
+        this.name = name;
         this.city = "Delhi";
-        this.city = city;
     }
 }
-const user = new User("Delhi");
