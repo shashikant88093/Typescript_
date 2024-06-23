@@ -237,3 +237,56 @@ let user: User = {
 };
 
 
+<!--  class in typescript -->
+
+class User {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    printUser() {
+        console.log(`Name: ${this.name}, Age: ${this.age}`);
+    }
+}
+
+let user = new User('John', 30);
+
+user.printUser(); // Name: John, Age: 30
+
+# class inheritance
+
+class User {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    printUser() {
+        console.log(`Name: ${this.name}, Age: ${this.age}`);
+    }
+}
+
+class Admin extends User {
+    role: string;
+
+    constructor(name: string, age: number, role: string) {
+        super(name, age);
+        this.role = role;
+    }
+
+    printAdmin() {
+        console.log(`Name: ${this.name}, Age: ${this.age}, Role: ${this.role}`);
+    }
+}
+
+
+let admin = new Admin('John', 30, 'Admin');
+
+admin.printAdmin(); // Name: John, Age: 30, Role: Admin
