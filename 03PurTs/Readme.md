@@ -11,6 +11,6 @@ cmd tsc -w
 
 <!-- setter and getter -->
 
-In getter we can return the output but in setter we cannot return any output 
+In getter we can have return type but in setter we cannot return type 
 
 publice method and variable name can get access inside or outside of class but private can only be acessable inside the class only
