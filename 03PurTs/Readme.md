@@ -8,3 +8,9 @@ cmd tsc --init
 
 <!-- to compile ts file to js file  -->
 cmd tsc -w
+
+<!-- setter and getter -->
+
+In getter we can return the output but in setter we cannot return any output 
+
+publice method and variable name can get access inside or outside of class but private can only be acessable inside the class only
